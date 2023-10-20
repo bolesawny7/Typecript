@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+        /* Base Options: */
+        "esModuleInterop": true,
+        "skipLibCheck": true, 
+        "target": "es2022",
+        "verbatimModuleSyntax": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+
+        /* Strictness */
+        "strict": true,
+
+        "noUncheckedIndexedAccess": true,
+        /* If transpiling with TypeScript: */
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "outDir": "dist",
+        "sourceMap": true,
+
+        /* If NOT transpiling with TypeScript: */
+        "moduleResolution": "Bundler",
+        "module": "ESNext",
+        "noEmit": true,
+
+        /* If your code runs in the DOM: */
+        "lib": [
+            "es2022",
+            "dom",
+            "dom.iterable"
+        ],
+
+        /* If your code doesn't run in the DOM: */
+        "lib": [
+            "es2022"
+        ],
+
+        /* If you're building for a library: */
+        //tells typescript to emit .d.ts files, needed so that libraries can get autocomplete on the .js files youre creating
+        "declaration": true,
+
+        /* If you're building for a library in a monorepo: */
+        "declaration": true,
+
+        //tells yypescript to emit .tsbuildinfo files, this tells typescript that your project is part of a monorepo, and also helps it to cache builds to run faster
+        "composite": true,
+        
+        // both sourceMap and declaration map tells typescript to emit source maps and declaration maps. these are needed so that when consumers of your libraries are debugging, they can jump to the original source code using go-to-definition
+        "sourceMap": true,
+        "declarationMap": true
+    }
+}

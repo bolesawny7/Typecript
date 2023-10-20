@@ -1,0 +1,6 @@
+{
+    "main": "index.js",
+    "scripts": {
+        "start": "set UV_THREADPOOL_SIZE=10 & node index.js"
+    }
+}
